@@ -8,7 +8,7 @@
     <body>
         
         <div class="frame">
-            <textarea class="text" placeholder="Escribe aqui algo..."></textarea>
+            <textarea id="text" placeholder="Escribe aqui algo..."></textarea>
         </div>        
         
         <button onclick="guardar()" id="back"><a href="index.html">&larr;</a></button>
@@ -41,6 +41,7 @@
             margin-top: 5%;
             margin-left: 5%;
             float: left;
+            font-size: 30px;
             
             background: #F5F5F5;
             border: none;
@@ -48,11 +49,6 @@
             border-radius: 3px;
             padding-left: 10px;
             box-sizing: border-box;
-        }
-
-        #save {
-            background: blue;
-            color: white;
         }
         
         #back {
@@ -76,6 +72,24 @@
         }
 
     </style>
-    
-    
+        
+    <script>
+        
+        window.addEventListener('load', cargar, true);
+        
+        function cargar() {
+           
+            if(localStorage.getItem('string')) {
+                 
+                texto = localStorage.getItem('string');
+                document.getElementById('text').value = texto;
+            }
+        }
+        
+        function guardar() {
+            texto = document.getElementById('text').value;
+            localStorage.setItem('string', texto);
+        }
+    </script>
+            
 </html>

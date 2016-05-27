@@ -5,7 +5,7 @@
 
 @font-face {
 font-family: Helvetica;
-src: url("/usr/share/fonts/opentype/Helvetica Neue Ultra Light/HelveticaNeue-UltraLight.otf") format("opentype");
+src: url(HelveticaNeue-UltraLight.otf);
 }
 
 #header {

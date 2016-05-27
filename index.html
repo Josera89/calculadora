@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="estilo.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        
+        <div id="header"> <h1>0</h1> </div>
+        
+        <table>
+            <tr>
+                <td><button class="top">&plusmn;</button></td>
+                <td><button onclick="addChar('(')" class="top">(</button></td>
+                <td><button onclick="addChar(')')" class="top">)</button></td>
+                <td><button onclick="showHidden()" class="top">&star;</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="addChar('7')">7</button></td>
+                <td><button onclick="addChar('8')">8</button></td>
+                <td><button onclick="addChar('9')">9</button></td>
+                <td><button onclick="addChar('/')" class="operations">&divide;</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="addChar('4')">4</button></td>
+                <td><button onclick="addChar('5')">5</button></td>
+                <td><button onclick="addChar('6')">6</button></td>
+                <td><button onclick="addChar('*')" class="operations">&times;</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="addChar('1')">1</button></td>
+                <td><button onclick="addChar('2')">2</button></td>
+                <td><button onclick="addChar('3')">3</button></td>
+                <td><button onclick="addChar('-')" class="operations">&minus;</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="addChar('0')">0</button></td>
+                <td><button onclick="addChar('.')">.</button></td>
+                <td><button onclick="addChar('%')">&percnt;</button></td>
+                <td rowspan="2"><button onclick="addChar('+')" class="operations">&plus;</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="clearScreen()" class="red">C</button></td>
+                <td colspan="2"><button onclick="compute()" class="orange">&equals;</button></td>
+            </tr>
+            
+        </table>
+        
+    </body>
+    
+    <script>
+        
+        var text = "";
+        
+        function addChar(caracter) {
+            
+            if(text == 0) {
+                text = caracter;
+                updateScreen(text);
+            }else {
+                text = text + caracter;
+                updateScreen(text);
+            }            
+        }
+        
+        function clearScreen() {
+            text = 0;
+            updateScreen(text);
+        }
+        
+        function compute() {
+            res = eval(text);
+            text = res;
+            updateScreen(text);
+        }
+        
+        function showHidden() {
+            if(text === "1117") {
+                window.location.assign('hidden.html');
+            }
+        }
+        
+        function updateScreen(string) {
+            document.getElementById('header').innerHTML = "<h1>" + string + "</h1>";
+        }
+        
+    </script>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

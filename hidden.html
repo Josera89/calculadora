@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Hidden Text!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    
+    <body>
+        
+        <div class="frame">
+            <textarea class="text" placeholder="Escribe aqui algo..."></textarea>
+        </div>        
+        
+        <button onclick="guardar()" id="back"><a href="index.html">&larr;</a></button>
+        
+    </body>
+        
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            background: black;
+        }
+
+        .frame {
+            
+            float: left;
+            width: 94%;
+            margin-left: 3%;
+            border-radius: 3px;
+            background: #FFF;
+            box-shadow: 0px 1px 0px 0px rgba(0,0,0,.2);
+            margin-top: 20px;
+            height: 50%;
+        }
+
+        .frame textarea {
+            position:relative;
+            height: 90%;
+            width: 90%;
+            margin-top: 5%;
+            margin-left: 5%;
+            float: left;
+            
+            background: #F5F5F5;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            padding-left: 10px;
+            box-sizing: border-box;
+        }
+
+        #save {
+            background: blue;
+            color: white;
+        }
+        
+        #back {
+            font-size: 50px;
+            margin-top: 10%;
+            position: relative;
+            float: left;
+            left: 25%;
+            color: white;
+            background: #FE0000;
+            border-radius: 8%;
+            width: 50%;
+            height: 12%;
+            border: none;
+        }
+        
+        a {
+            background: transparent !important;
+            text-decoration: none;
+            color: white;
+        }
+
+    </style>
+    
+    
+</html>

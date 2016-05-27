@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+font-family: Helvetica;
+src: url("/usr/share/fonts/opentype/Helvetica Neue Ultra Light/HelveticaNeue-UltraLight.otf") format("opentype");
+}
+
+#header {
+    width: 100%;
+    height: 25%;
+    position: fixed;
+    box-sizing: border-box;
+    background: black;
+}
+#header>h1 {
+    text-align: right;
+    float: right;
+    padding-right: 10px;
+    font-size: 5em;
+    font-family: Helvetica;
+    font-weight: 100;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    word-wrap: no-wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+table {
+    float: left;
+    position: fixed;
+    height: 75%;
+    width: 100%;
+    top: 25%;
+    border-collapse: collapse;
+}
+
+table, td {
+    border: 2px solid black;
+}
+
+td {
+    width: 25%;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    font-family: Helvetica;
+    font-weight:600;
+}
+
+.top {
+    background: #4D4D4D;
+    color: white;
+}
+
+.operations {
+    background: #337EFE;
+    color: white;
+}
+
+.red {
+    background: #FE0000;
+    color: white;
+}
+
+.orange {
+    background: #FE8826;
+    color: white;
+}
+
+
+
+
